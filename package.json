@@ -13,7 +13,9 @@
     "@nozbe/lokijs": "^1.5.12-wmelon7",
     "@nozbe/watermelondb": "^0.28.0",
     "react": "19.0.0",
-    "react-native": "0.79.3"
+    "react-native": "0.79.3",
+    "react-native-slider": "^0.11.0",
+    "react-native-vector-icons": "^10.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",

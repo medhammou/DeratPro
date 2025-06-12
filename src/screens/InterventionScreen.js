@@ -12,10 +12,9 @@ import {
   Alert,
   Platform,
 } from 'react-native';
-import Slider from '@react-native-community/slider';
+import Slider from 'react-native-slider';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
-// --- NOUVEL IMPORT ---
 // On importe le "hook" qui nous donne accès à la base de données
 import {useDatabase} from '@nozbe/watermelondb/hooks';
 
@@ -30,7 +29,6 @@ const InterventionScreen = ({route}) => {
   // route.params pourrait contenir les vraies données de la station. On utilise des données simulées pour l'exemple.
   const station = route?.params?.station || MOCK_STATION_DATA;
 
-  // --- NOUVELLE LIGNE ---
   // On récupère l'instance de la base de données via le hook
   const database = useDatabase();
 
@@ -68,7 +66,6 @@ const InterventionScreen = ({route}) => {
     );
   };
 
-  // --- NOUVELLE FONCTION handleSave ---
   /**
    * Fonction principale appelée lors de l'enregistrement.
    * Elle écrit les données du formulaire directement dans la base de données WatermelonDB.
@@ -100,11 +97,6 @@ const InterventionScreen = ({route}) => {
         'Intervention Enregistrée',
         "Les données ont été sauvegardées dans la base de données de l'application.",
       );
-
-      // Optionnel : on pourrait vider le formulaire après la sauvegarde
-      // setConsumption(0);
-      // setNotes('');
-      // setTraces({ droppings: false, tracks: false, damage: false, nest: false, smell: false });
     });
   };
 
